@@ -30,6 +30,32 @@ Partial Class CharacterSheet
 		Me.GBoxMovement = New System.Windows.Forms.GroupBox()
 		Me.GBoxInitiative = New System.Windows.Forms.GroupBox()
 		Me.GBoxAbilities = New System.Windows.Forms.GroupBox()
+		Me.TxtAbilPlusCha = New System.Windows.Forms.TextBox()
+		Me.TxtAbilPlusWis = New System.Windows.Forms.TextBox()
+		Me.TxtAbilPlusInt = New System.Windows.Forms.TextBox()
+		Me.TxtAbilPlusDex = New System.Windows.Forms.TextBox()
+		Me.TxtAbilPlusCon = New System.Windows.Forms.TextBox()
+		Me.TxtAbilPlusStr = New System.Windows.Forms.TextBox()
+		Me.TxtAbilModCha = New System.Windows.Forms.TextBox()
+		Me.TxtAbilModWis = New System.Windows.Forms.TextBox()
+		Me.TxtAbilModInt = New System.Windows.Forms.TextBox()
+		Me.TxtAbilModDex = New System.Windows.Forms.TextBox()
+		Me.TxtAbilModCon = New System.Windows.Forms.TextBox()
+		Me.TxtAbilModStr = New System.Windows.Forms.TextBox()
+		Me.LblAbility = New System.Windows.Forms.Label()
+		Me.LblAbilCha = New System.Windows.Forms.Label()
+		Me.LblAbilWis = New System.Windows.Forms.Label()
+		Me.LblAbilInt = New System.Windows.Forms.Label()
+		Me.LblAbilDex = New System.Windows.Forms.Label()
+		Me.LblAbilCon = New System.Windows.Forms.Label()
+		Me.LblAbilStr = New System.Windows.Forms.Label()
+		Me.TxtAbilScoreCha = New System.Windows.Forms.TextBox()
+		Me.TxtAbilScoreWis = New System.Windows.Forms.TextBox()
+		Me.TxtAbilScoreInt = New System.Windows.Forms.TextBox()
+		Me.TxtAbilScoreDex = New System.Windows.Forms.TextBox()
+		Me.TxtAbilScoreCon = New System.Windows.Forms.TextBox()
+		Me.TxtAbilScoreStr = New System.Windows.Forms.TextBox()
+		Me.LblAbilityScore = New System.Windows.Forms.Label()
 		Me.GboxCharInfo = New System.Windows.Forms.GroupBox()
 		Me.LblPlayerName = New System.Windows.Forms.Label()
 		Me.LblParagonPath = New System.Windows.Forms.Label()
@@ -81,6 +107,7 @@ Partial Class CharacterSheet
 		Me.TabControl.SuspendLayout()
 		Me.TabPageBasicInfo.SuspendLayout()
 		Me.TblBasicInfo.SuspendLayout()
+		Me.GBoxAbilities.SuspendLayout()
 		Me.GboxCharInfo.SuspendLayout()
 		Me.TabPageCombat.SuspendLayout()
 		Me.MenuStrip1.SuspendLayout()
@@ -96,6 +123,7 @@ Partial Class CharacterSheet
 		Me.TabControl.SelectedIndex = 0
 		Me.TabControl.Size = New System.Drawing.Size(977, 568)
 		Me.TabControl.TabIndex = 0
+		Me.TabControl.TabStop = False
 		'
 		'TabPageBasicInfo
 		'
@@ -165,6 +193,32 @@ Partial Class CharacterSheet
 		'
 		'GBoxAbilities
 		'
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusCha)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusWis)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusInt)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusDex)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusCon)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusStr)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilModCha)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilModWis)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilModInt)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilModDex)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilModCon)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilModStr)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbility)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilCha)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilWis)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilInt)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilDex)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilCon)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilStr)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilScoreCha)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilScoreWis)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilScoreInt)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilScoreDex)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilScoreCon)
+		Me.GBoxAbilities.Controls.Add(Me.TxtAbilScoreStr)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilityScore)
 		Me.GBoxAbilities.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.GBoxAbilities.Location = New System.Drawing.Point(3, 177)
 		Me.GBoxAbilities.Name = "GBoxAbilities"
@@ -173,6 +227,248 @@ Partial Class CharacterSheet
 		Me.GBoxAbilities.TabIndex = 2
 		Me.GBoxAbilities.TabStop = False
 		Me.GBoxAbilities.Text = "Ability Scores"
+		'
+		'TxtAbilPlusCha
+		'
+		Me.TxtAbilPlusCha.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilPlusCha.Location = New System.Drawing.Point(247, 310)
+		Me.TxtAbilPlusCha.Name = "TxtAbilPlusCha"
+		Me.TxtAbilPlusCha.ReadOnly = True
+		Me.TxtAbilPlusCha.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilPlusCha.TabIndex = 59
+		'
+		'TxtAbilPlusWis
+		'
+		Me.TxtAbilPlusWis.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilPlusWis.Location = New System.Drawing.Point(247, 272)
+		Me.TxtAbilPlusWis.Name = "TxtAbilPlusWis"
+		Me.TxtAbilPlusWis.ReadOnly = True
+		Me.TxtAbilPlusWis.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilPlusWis.TabIndex = 58
+		'
+		'TxtAbilPlusInt
+		'
+		Me.TxtAbilPlusInt.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilPlusInt.Location = New System.Drawing.Point(247, 196)
+		Me.TxtAbilPlusInt.Name = "TxtAbilPlusInt"
+		Me.TxtAbilPlusInt.ReadOnly = True
+		Me.TxtAbilPlusInt.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilPlusInt.TabIndex = 57
+		'
+		'TxtAbilPlusDex
+		'
+		Me.TxtAbilPlusDex.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilPlusDex.Location = New System.Drawing.Point(247, 158)
+		Me.TxtAbilPlusDex.Name = "TxtAbilPlusDex"
+		Me.TxtAbilPlusDex.ReadOnly = True
+		Me.TxtAbilPlusDex.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilPlusDex.TabIndex = 56
+		'
+		'TxtAbilPlusCon
+		'
+		Me.TxtAbilPlusCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilPlusCon.Location = New System.Drawing.Point(247, 82)
+		Me.TxtAbilPlusCon.Name = "TxtAbilPlusCon"
+		Me.TxtAbilPlusCon.ReadOnly = True
+		Me.TxtAbilPlusCon.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilPlusCon.TabIndex = 55
+		'
+		'TxtAbilPlusStr
+		'
+		Me.TxtAbilPlusStr.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilPlusStr.Location = New System.Drawing.Point(247, 44)
+		Me.TxtAbilPlusStr.Name = "TxtAbilPlusStr"
+		Me.TxtAbilPlusStr.ReadOnly = True
+		Me.TxtAbilPlusStr.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilPlusStr.TabIndex = 54
+		'
+		'TxtAbilModCha
+		'
+		Me.TxtAbilModCha.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilModCha.Location = New System.Drawing.Point(134, 310)
+		Me.TxtAbilModCha.Name = "TxtAbilModCha"
+		Me.TxtAbilModCha.ReadOnly = True
+		Me.TxtAbilModCha.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilModCha.TabIndex = 53
+		'
+		'TxtAbilModWis
+		'
+		Me.TxtAbilModWis.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilModWis.Location = New System.Drawing.Point(134, 272)
+		Me.TxtAbilModWis.Name = "TxtAbilModWis"
+		Me.TxtAbilModWis.ReadOnly = True
+		Me.TxtAbilModWis.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilModWis.TabIndex = 52
+		'
+		'TxtAbilModInt
+		'
+		Me.TxtAbilModInt.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilModInt.Location = New System.Drawing.Point(134, 196)
+		Me.TxtAbilModInt.Name = "TxtAbilModInt"
+		Me.TxtAbilModInt.ReadOnly = True
+		Me.TxtAbilModInt.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilModInt.TabIndex = 51
+		'
+		'TxtAbilModDex
+		'
+		Me.TxtAbilModDex.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilModDex.Location = New System.Drawing.Point(134, 158)
+		Me.TxtAbilModDex.Name = "TxtAbilModDex"
+		Me.TxtAbilModDex.ReadOnly = True
+		Me.TxtAbilModDex.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilModDex.TabIndex = 50
+		'
+		'TxtAbilModCon
+		'
+		Me.TxtAbilModCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilModCon.Location = New System.Drawing.Point(134, 82)
+		Me.TxtAbilModCon.Name = "TxtAbilModCon"
+		Me.TxtAbilModCon.ReadOnly = True
+		Me.TxtAbilModCon.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilModCon.TabIndex = 49
+		'
+		'TxtAbilModStr
+		'
+		Me.TxtAbilModStr.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilModStr.Location = New System.Drawing.Point(134, 44)
+		Me.TxtAbilModStr.Name = "TxtAbilModStr"
+		Me.TxtAbilModStr.ReadOnly = True
+		Me.TxtAbilModStr.Size = New System.Drawing.Size(46, 32)
+		Me.TxtAbilModStr.TabIndex = 48
+		'
+		'LblAbility
+		'
+		Me.LblAbility.AutoSize = True
+		Me.LblAbility.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbility.Location = New System.Drawing.Point(46, 25)
+		Me.LblAbility.Name = "LblAbility"
+		Me.LblAbility.Size = New System.Drawing.Size(34, 13)
+		Me.LblAbility.TabIndex = 47
+		Me.LblAbility.Text = "Ability"
+		'
+		'LblAbilCha
+		'
+		Me.LblAbilCha.AutoSize = True
+		Me.LblAbilCha.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilCha.Location = New System.Drawing.Point(44, 310)
+		Me.LblAbilCha.Name = "LblAbilCha"
+		Me.LblAbilCha.Size = New System.Drawing.Size(59, 26)
+		Me.LblAbilCha.TabIndex = 46
+		Me.LblAbilCha.Text = "CHA"
+		'
+		'LblAbilWis
+		'
+		Me.LblAbilWis.AutoSize = True
+		Me.LblAbilWis.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilWis.Location = New System.Drawing.Point(44, 272)
+		Me.LblAbilWis.Name = "LblAbilWis"
+		Me.LblAbilWis.Size = New System.Drawing.Size(54, 26)
+		Me.LblAbilWis.TabIndex = 45
+		Me.LblAbilWis.Text = "WIS"
+		'
+		'LblAbilInt
+		'
+		Me.LblAbilInt.AutoSize = True
+		Me.LblAbilInt.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilInt.Location = New System.Drawing.Point(44, 196)
+		Me.LblAbilInt.Name = "LblAbilInt"
+		Me.LblAbilInt.Size = New System.Drawing.Size(46, 26)
+		Me.LblAbilInt.TabIndex = 44
+		Me.LblAbilInt.Text = "INT"
+		'
+		'LblAbilDex
+		'
+		Me.LblAbilDex.AutoSize = True
+		Me.LblAbilDex.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilDex.Location = New System.Drawing.Point(44, 158)
+		Me.LblAbilDex.Name = "LblAbilDex"
+		Me.LblAbilDex.Size = New System.Drawing.Size(58, 26)
+		Me.LblAbilDex.TabIndex = 43
+		Me.LblAbilDex.Text = "DEX"
+		'
+		'LblAbilCon
+		'
+		Me.LblAbilCon.AutoSize = True
+		Me.LblAbilCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilCon.Location = New System.Drawing.Point(44, 82)
+		Me.LblAbilCon.Name = "LblAbilCon"
+		Me.LblAbilCon.Size = New System.Drawing.Size(61, 26)
+		Me.LblAbilCon.TabIndex = 42
+		Me.LblAbilCon.Text = "CON"
+		'
+		'LblAbilStr
+		'
+		Me.LblAbilStr.AutoSize = True
+		Me.LblAbilStr.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilStr.Location = New System.Drawing.Point(44, 44)
+		Me.LblAbilStr.Name = "LblAbilStr"
+		Me.LblAbilStr.Size = New System.Drawing.Size(55, 26)
+		Me.LblAbilStr.TabIndex = 41
+		Me.LblAbilStr.Text = "STR"
+		'
+		'TxtAbilScoreCha
+		'
+		Me.TxtAbilScoreCha.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilScoreCha.Location = New System.Drawing.Point(6, 307)
+		Me.TxtAbilScoreCha.MaxLength = 2
+		Me.TxtAbilScoreCha.Name = "TxtAbilScoreCha"
+		Me.TxtAbilScoreCha.Size = New System.Drawing.Size(32, 32)
+		Me.TxtAbilScoreCha.TabIndex = 40
+		'
+		'TxtAbilScoreWis
+		'
+		Me.TxtAbilScoreWis.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilScoreWis.Location = New System.Drawing.Point(6, 269)
+		Me.TxtAbilScoreWis.MaxLength = 2
+		Me.TxtAbilScoreWis.Name = "TxtAbilScoreWis"
+		Me.TxtAbilScoreWis.Size = New System.Drawing.Size(32, 32)
+		Me.TxtAbilScoreWis.TabIndex = 39
+		'
+		'TxtAbilScoreInt
+		'
+		Me.TxtAbilScoreInt.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilScoreInt.Location = New System.Drawing.Point(6, 193)
+		Me.TxtAbilScoreInt.MaxLength = 2
+		Me.TxtAbilScoreInt.Name = "TxtAbilScoreInt"
+		Me.TxtAbilScoreInt.Size = New System.Drawing.Size(32, 32)
+		Me.TxtAbilScoreInt.TabIndex = 37
+		'
+		'TxtAbilScoreDex
+		'
+		Me.TxtAbilScoreDex.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilScoreDex.Location = New System.Drawing.Point(6, 155)
+		Me.TxtAbilScoreDex.MaxLength = 2
+		Me.TxtAbilScoreDex.Name = "TxtAbilScoreDex"
+		Me.TxtAbilScoreDex.Size = New System.Drawing.Size(32, 32)
+		Me.TxtAbilScoreDex.TabIndex = 36
+		'
+		'TxtAbilScoreCon
+		'
+		Me.TxtAbilScoreCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilScoreCon.Location = New System.Drawing.Point(6, 79)
+		Me.TxtAbilScoreCon.MaxLength = 2
+		Me.TxtAbilScoreCon.Name = "TxtAbilScoreCon"
+		Me.TxtAbilScoreCon.Size = New System.Drawing.Size(32, 32)
+		Me.TxtAbilScoreCon.TabIndex = 34
+		'
+		'TxtAbilScoreStr
+		'
+		Me.TxtAbilScoreStr.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtAbilScoreStr.Location = New System.Drawing.Point(6, 41)
+		Me.TxtAbilScoreStr.MaxLength = 2
+		Me.TxtAbilScoreStr.Name = "TxtAbilScoreStr"
+		Me.TxtAbilScoreStr.Size = New System.Drawing.Size(32, 32)
+		Me.TxtAbilScoreStr.TabIndex = 33
+		'
+		'LblAbilityScore
+		'
+		Me.LblAbilityScore.AutoSize = True
+		Me.LblAbilityScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilityScore.Location = New System.Drawing.Point(3, 25)
+		Me.LblAbilityScore.Name = "LblAbilityScore"
+		Me.LblAbilityScore.Size = New System.Drawing.Size(35, 13)
+		Me.LblAbilityScore.TabIndex = 33
+		Me.LblAbilityScore.Text = "Score"
 		'
 		'GboxCharInfo
 		'
@@ -651,6 +947,8 @@ Partial Class CharacterSheet
 		Me.TabControl.ResumeLayout(False)
 		Me.TabPageBasicInfo.ResumeLayout(False)
 		Me.TblBasicInfo.ResumeLayout(False)
+		Me.GBoxAbilities.ResumeLayout(False)
+		Me.GBoxAbilities.PerformLayout()
 		Me.GboxCharInfo.ResumeLayout(False)
 		Me.GboxCharInfo.PerformLayout()
 		Me.TabPageCombat.ResumeLayout(False)
@@ -715,5 +1013,31 @@ Partial Class CharacterSheet
 	Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
 	Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 	Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+	Friend WithEvents LblAbilCha As System.Windows.Forms.Label
+	Friend WithEvents LblAbilWis As System.Windows.Forms.Label
+	Friend WithEvents LblAbilInt As System.Windows.Forms.Label
+	Friend WithEvents LblAbilDex As System.Windows.Forms.Label
+	Friend WithEvents LblAbilCon As System.Windows.Forms.Label
+	Friend WithEvents LblAbilStr As System.Windows.Forms.Label
+	Friend WithEvents TxtAbilScoreCha As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilScoreWis As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilScoreInt As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilScoreDex As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilScoreCon As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilScoreStr As System.Windows.Forms.TextBox
+	Friend WithEvents LblAbilityScore As System.Windows.Forms.Label
+	Friend WithEvents LblAbility As System.Windows.Forms.Label
+	Friend WithEvents TxtAbilPlusCha As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilPlusWis As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilPlusInt As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilPlusDex As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilPlusCon As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilPlusStr As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilModCha As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilModWis As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilModInt As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilModDex As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilModCon As System.Windows.Forms.TextBox
+	Friend WithEvents TxtAbilModStr As System.Windows.Forms.TextBox
 
 End Class

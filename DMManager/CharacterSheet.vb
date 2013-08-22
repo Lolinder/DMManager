@@ -4,7 +4,7 @@
 	Private myCurrentFile As String
 
 	'---------------------
-	' KeyPress Functions
+	' Load/Save Functions
 	'---------------------
 	Private Sub CharacterSheet_Load(sender As Object, e As EventArgs) Handles MyBase.Load											' initialization
 		'-----------add all controls to be saved/loaded
@@ -40,9 +40,10 @@
 	End Sub
 
 	'---------------------
-	' KeyPress Functions
+	' Validation Functions
 	'---------------------
-	Private Sub TxtTotalXP_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles TxtTotalXP.KeyPress		' entry in the Total XP Field
+	Private Sub TxtTotalXP_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles TxtTotalXP.KeyPress, TxtAbilScoreStr.KeyPress, TxtAbilScoreCon.KeyPress,
+			TxtAbilScoreDex.KeyPress, TxtAbilScoreInt.KeyPress, TxtAbilScoreWis.KeyPress, TxtAbilScoreCha.KeyPress					' any field that needs to only accept numbers
 		ModKeypressHandler.onlyNumeric(e)
 	End Sub
 
@@ -53,6 +54,22 @@
 			TxtLevel.Text = Nothing																									' otherwise clear the Level field
 		End If
 	End Sub
+
+	Private Sub TxtAbilScoreStr_LostFocus(sender As Object, e As EventArgs) Handles TxtAbilScoreStr.LostFocus
+		If TxtAbilScoreStr.Text <> Nothing Then
+			If Convert.ToInt32(TxtAbilScoreStr.Text) > 18 Then
+				TxtAbilScoreStr.Text = "18"
+			ElseIf Convert.ToInt32(TxtAbilScoreStr.Text) < 2 Then
+				TxtAbilScoreStr.Text = "2"
+			End If
+			TxtAbilModStr.Text = Math.Floor((Convert.ToInt32(TxtAbilScoreStr.Text) - 10) / 2)
+			TxtAbilPlusStr.Text = If(TxtLevel.Text = Nothing, TxtAbilModStr.Text, Convert.ToInt32(TxtAbilModStr.Text) + Math.Floor(Convert.ToInt32(TxtLevel.Text)) / 2)
+		Else
+			TxtAbilModStr.Text = "0"
+			TxtAbilPlusStr.Text = "0"
+		End If
+	End Sub
+
 	'---------------------
 	' Menu Bar Functions
 	'---------------------
