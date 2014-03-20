@@ -104,9 +104,23 @@ Partial Class CharacterSheet
 		Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
 		Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.LblAbilMod = New System.Windows.Forms.Label()
+		Me.LblAbilPlus = New System.Windows.Forms.Label()
+		Me.TxtSpeedTotal = New System.Windows.Forms.TextBox()
+		Me.LblSpeed = New System.Windows.Forms.Label()
+		Me.LblSpeedSquares = New System.Windows.Forms.Label()
+		Me.TxtSpeedBase = New System.Windows.Forms.TextBox()
+		Me.TxtSpeedArmor = New System.Windows.Forms.TextBox()
+		Me.TxtSpeedItem = New System.Windows.Forms.TextBox()
+		Me.TxtSpeedMisc = New System.Windows.Forms.TextBox()
+		Me.LblSpeedBase = New System.Windows.Forms.Label()
+		Me.LblSpeedArmor = New System.Windows.Forms.Label()
+		Me.LblSpeedItem = New System.Windows.Forms.Label()
+		Me.LblSpeedMisc = New System.Windows.Forms.Label()
 		Me.TabControl.SuspendLayout()
 		Me.TabPageBasicInfo.SuspendLayout()
 		Me.TblBasicInfo.SuspendLayout()
+		Me.GBoxMovement.SuspendLayout()
 		Me.GBoxAbilities.SuspendLayout()
 		Me.GboxCharInfo.SuspendLayout()
 		Me.TabPageCombat.SuspendLayout()
@@ -173,6 +187,17 @@ Partial Class CharacterSheet
 		'
 		'GBoxMovement
 		'
+		Me.GBoxMovement.Controls.Add(Me.LblSpeedMisc)
+		Me.GBoxMovement.Controls.Add(Me.LblSpeedItem)
+		Me.GBoxMovement.Controls.Add(Me.LblSpeedArmor)
+		Me.GBoxMovement.Controls.Add(Me.LblSpeedBase)
+		Me.GBoxMovement.Controls.Add(Me.TxtSpeedMisc)
+		Me.GBoxMovement.Controls.Add(Me.TxtSpeedItem)
+		Me.GBoxMovement.Controls.Add(Me.TxtSpeedArmor)
+		Me.GBoxMovement.Controls.Add(Me.TxtSpeedBase)
+		Me.GBoxMovement.Controls.Add(Me.LblSpeedSquares)
+		Me.GBoxMovement.Controls.Add(Me.LblSpeed)
+		Me.GBoxMovement.Controls.Add(Me.TxtSpeedTotal)
 		Me.GBoxMovement.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.GBoxMovement.Location = New System.Drawing.Point(644, 112)
 		Me.GBoxMovement.Name = "GBoxMovement"
@@ -193,6 +218,8 @@ Partial Class CharacterSheet
 		'
 		'GBoxAbilities
 		'
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilPlus)
+		Me.GBoxAbilities.Controls.Add(Me.LblAbilMod)
 		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusCha)
 		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusWis)
 		Me.GBoxAbilities.Controls.Add(Me.TxtAbilPlusInt)
@@ -340,7 +367,7 @@ Partial Class CharacterSheet
 		'
 		Me.LblAbility.AutoSize = True
 		Me.LblAbility.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.LblAbility.Location = New System.Drawing.Point(46, 25)
+		Me.LblAbility.Location = New System.Drawing.Point(47, 25)
 		Me.LblAbility.Name = "LblAbility"
 		Me.LblAbility.Size = New System.Drawing.Size(34, 13)
 		Me.LblAbility.TabIndex = 47
@@ -350,7 +377,7 @@ Partial Class CharacterSheet
 		'
 		Me.LblAbilCha.AutoSize = True
 		Me.LblAbilCha.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.LblAbilCha.Location = New System.Drawing.Point(44, 310)
+		Me.LblAbilCha.Location = New System.Drawing.Point(43, 313)
 		Me.LblAbilCha.Name = "LblAbilCha"
 		Me.LblAbilCha.Size = New System.Drawing.Size(59, 26)
 		Me.LblAbilCha.TabIndex = 46
@@ -360,7 +387,7 @@ Partial Class CharacterSheet
 		'
 		Me.LblAbilWis.AutoSize = True
 		Me.LblAbilWis.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.LblAbilWis.Location = New System.Drawing.Point(44, 272)
+		Me.LblAbilWis.Location = New System.Drawing.Point(44, 275)
 		Me.LblAbilWis.Name = "LblAbilWis"
 		Me.LblAbilWis.Size = New System.Drawing.Size(54, 26)
 		Me.LblAbilWis.TabIndex = 45
@@ -370,7 +397,7 @@ Partial Class CharacterSheet
 		'
 		Me.LblAbilInt.AutoSize = True
 		Me.LblAbilInt.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.LblAbilInt.Location = New System.Drawing.Point(44, 196)
+		Me.LblAbilInt.Location = New System.Drawing.Point(44, 199)
 		Me.LblAbilInt.Name = "LblAbilInt"
 		Me.LblAbilInt.Size = New System.Drawing.Size(46, 26)
 		Me.LblAbilInt.TabIndex = 44
@@ -380,7 +407,7 @@ Partial Class CharacterSheet
 		'
 		Me.LblAbilDex.AutoSize = True
 		Me.LblAbilDex.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.LblAbilDex.Location = New System.Drawing.Point(44, 158)
+		Me.LblAbilDex.Location = New System.Drawing.Point(44, 161)
 		Me.LblAbilDex.Name = "LblAbilDex"
 		Me.LblAbilDex.Size = New System.Drawing.Size(58, 26)
 		Me.LblAbilDex.TabIndex = 43
@@ -390,7 +417,7 @@ Partial Class CharacterSheet
 		'
 		Me.LblAbilCon.AutoSize = True
 		Me.LblAbilCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.LblAbilCon.Location = New System.Drawing.Point(44, 82)
+		Me.LblAbilCon.Location = New System.Drawing.Point(43, 85)
 		Me.LblAbilCon.Name = "LblAbilCon"
 		Me.LblAbilCon.Size = New System.Drawing.Size(61, 26)
 		Me.LblAbilCon.TabIndex = 42
@@ -400,7 +427,7 @@ Partial Class CharacterSheet
 		'
 		Me.LblAbilStr.AutoSize = True
 		Me.LblAbilStr.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.LblAbilStr.Location = New System.Drawing.Point(44, 44)
+		Me.LblAbilStr.Location = New System.Drawing.Point(43, 47)
 		Me.LblAbilStr.Name = "LblAbilStr"
 		Me.LblAbilStr.Size = New System.Drawing.Size(55, 26)
 		Me.LblAbilStr.TabIndex = 41
@@ -409,7 +436,7 @@ Partial Class CharacterSheet
 		'TxtAbilScoreCha
 		'
 		Me.TxtAbilScoreCha.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TxtAbilScoreCha.Location = New System.Drawing.Point(6, 307)
+		Me.TxtAbilScoreCha.Location = New System.Drawing.Point(6, 310)
 		Me.TxtAbilScoreCha.MaxLength = 2
 		Me.TxtAbilScoreCha.Name = "TxtAbilScoreCha"
 		Me.TxtAbilScoreCha.Size = New System.Drawing.Size(32, 32)
@@ -418,7 +445,7 @@ Partial Class CharacterSheet
 		'TxtAbilScoreWis
 		'
 		Me.TxtAbilScoreWis.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TxtAbilScoreWis.Location = New System.Drawing.Point(6, 269)
+		Me.TxtAbilScoreWis.Location = New System.Drawing.Point(6, 272)
 		Me.TxtAbilScoreWis.MaxLength = 2
 		Me.TxtAbilScoreWis.Name = "TxtAbilScoreWis"
 		Me.TxtAbilScoreWis.Size = New System.Drawing.Size(32, 32)
@@ -427,7 +454,7 @@ Partial Class CharacterSheet
 		'TxtAbilScoreInt
 		'
 		Me.TxtAbilScoreInt.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TxtAbilScoreInt.Location = New System.Drawing.Point(6, 193)
+		Me.TxtAbilScoreInt.Location = New System.Drawing.Point(6, 196)
 		Me.TxtAbilScoreInt.MaxLength = 2
 		Me.TxtAbilScoreInt.Name = "TxtAbilScoreInt"
 		Me.TxtAbilScoreInt.Size = New System.Drawing.Size(32, 32)
@@ -436,7 +463,7 @@ Partial Class CharacterSheet
 		'TxtAbilScoreDex
 		'
 		Me.TxtAbilScoreDex.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TxtAbilScoreDex.Location = New System.Drawing.Point(6, 155)
+		Me.TxtAbilScoreDex.Location = New System.Drawing.Point(6, 158)
 		Me.TxtAbilScoreDex.MaxLength = 2
 		Me.TxtAbilScoreDex.Name = "TxtAbilScoreDex"
 		Me.TxtAbilScoreDex.Size = New System.Drawing.Size(32, 32)
@@ -445,7 +472,7 @@ Partial Class CharacterSheet
 		'TxtAbilScoreCon
 		'
 		Me.TxtAbilScoreCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TxtAbilScoreCon.Location = New System.Drawing.Point(6, 79)
+		Me.TxtAbilScoreCon.Location = New System.Drawing.Point(6, 82)
 		Me.TxtAbilScoreCon.MaxLength = 2
 		Me.TxtAbilScoreCon.Name = "TxtAbilScoreCon"
 		Me.TxtAbilScoreCon.Size = New System.Drawing.Size(32, 32)
@@ -454,7 +481,7 @@ Partial Class CharacterSheet
 		'TxtAbilScoreStr
 		'
 		Me.TxtAbilScoreStr.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TxtAbilScoreStr.Location = New System.Drawing.Point(6, 41)
+		Me.TxtAbilScoreStr.Location = New System.Drawing.Point(6, 44)
 		Me.TxtAbilScoreStr.MaxLength = 2
 		Me.TxtAbilScoreStr.Name = "TxtAbilScoreStr"
 		Me.TxtAbilScoreStr.Size = New System.Drawing.Size(32, 32)
@@ -464,7 +491,7 @@ Partial Class CharacterSheet
 		'
 		Me.LblAbilityScore.AutoSize = True
 		Me.LblAbilityScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.LblAbilityScore.Location = New System.Drawing.Point(3, 25)
+		Me.LblAbilityScore.Location = New System.Drawing.Point(6, 25)
 		Me.LblAbilityScore.Name = "LblAbilityScore"
 		Me.LblAbilityScore.Size = New System.Drawing.Size(35, 13)
 		Me.LblAbilityScore.TabIndex = 33
@@ -932,6 +959,132 @@ Partial Class CharacterSheet
 		Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
 		Me.ExitToolStripMenuItem.Text = "Exit"
 		'
+		'LblAbilMod
+		'
+		Me.LblAbilMod.AutoSize = True
+		Me.LblAbilMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilMod.Location = New System.Drawing.Point(132, 25)
+		Me.LblAbilMod.Name = "LblAbilMod"
+		Me.LblAbilMod.Size = New System.Drawing.Size(48, 13)
+		Me.LblAbilMod.TabIndex = 60
+		Me.LblAbilMod.Text = "Abil Mod"
+		'
+		'LblAbilPlus
+		'
+		Me.LblAbilPlus.AutoSize = True
+		Me.LblAbilPlus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblAbilPlus.Location = New System.Drawing.Point(229, 25)
+		Me.LblAbilPlus.Name = "LblAbilPlus"
+		Me.LblAbilPlus.Size = New System.Drawing.Size(79, 13)
+		Me.LblAbilPlus.TabIndex = 61
+		Me.LblAbilPlus.Text = "Mod + 1/2 LVL"
+		'
+		'TxtSpeedTotal
+		'
+		Me.TxtSpeedTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtSpeedTotal.Location = New System.Drawing.Point(6, 19)
+		Me.TxtSpeedTotal.MaxLength = 2
+		Me.TxtSpeedTotal.Name = "TxtSpeedTotal"
+		Me.TxtSpeedTotal.ReadOnly = True
+		Me.TxtSpeedTotal.Size = New System.Drawing.Size(32, 32)
+		Me.TxtSpeedTotal.TabIndex = 62
+		'
+		'LblSpeed
+		'
+		Me.LblSpeed.AutoSize = True
+		Me.LblSpeed.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblSpeed.Location = New System.Drawing.Point(44, 22)
+		Me.LblSpeed.Name = "LblSpeed"
+		Me.LblSpeed.Size = New System.Drawing.Size(75, 26)
+		Me.LblSpeed.TabIndex = 62
+		Me.LblSpeed.Text = "Speed"
+		'
+		'LblSpeedSquares
+		'
+		Me.LblSpeedSquares.AutoSize = True
+		Me.LblSpeedSquares.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblSpeedSquares.Location = New System.Drawing.Point(122, 31)
+		Me.LblSpeedSquares.Name = "LblSpeedSquares"
+		Me.LblSpeedSquares.Size = New System.Drawing.Size(52, 13)
+		Me.LblSpeedSquares.TabIndex = 62
+		Me.LblSpeedSquares.Text = "(Squares)"
+		'
+		'TxtSpeedBase
+		'
+		Me.TxtSpeedBase.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtSpeedBase.Location = New System.Drawing.Point(180, 24)
+		Me.TxtSpeedBase.MaxLength = 2
+		Me.TxtSpeedBase.Name = "TxtSpeedBase"
+		Me.TxtSpeedBase.Size = New System.Drawing.Size(28, 29)
+		Me.TxtSpeedBase.TabIndex = 63
+		'
+		'TxtSpeedArmor
+		'
+		Me.TxtSpeedArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtSpeedArmor.Location = New System.Drawing.Point(214, 24)
+		Me.TxtSpeedArmor.MaxLength = 2
+		Me.TxtSpeedArmor.Name = "TxtSpeedArmor"
+		Me.TxtSpeedArmor.Size = New System.Drawing.Size(28, 29)
+		Me.TxtSpeedArmor.TabIndex = 64
+		'
+		'TxtSpeedItem
+		'
+		Me.TxtSpeedItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtSpeedItem.Location = New System.Drawing.Point(248, 24)
+		Me.TxtSpeedItem.MaxLength = 2
+		Me.TxtSpeedItem.Name = "TxtSpeedItem"
+		Me.TxtSpeedItem.Size = New System.Drawing.Size(28, 29)
+		Me.TxtSpeedItem.TabIndex = 65
+		'
+		'TxtSpeedMisc
+		'
+		Me.TxtSpeedMisc.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TxtSpeedMisc.Location = New System.Drawing.Point(282, 24)
+		Me.TxtSpeedMisc.MaxLength = 2
+		Me.TxtSpeedMisc.Name = "TxtSpeedMisc"
+		Me.TxtSpeedMisc.Size = New System.Drawing.Size(28, 29)
+		Me.TxtSpeedMisc.TabIndex = 66
+		'
+		'LblSpeedBase
+		'
+		Me.LblSpeedBase.AutoSize = True
+		Me.LblSpeedBase.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblSpeedBase.Location = New System.Drawing.Point(177, 8)
+		Me.LblSpeedBase.Name = "LblSpeedBase"
+		Me.LblSpeedBase.Size = New System.Drawing.Size(31, 13)
+		Me.LblSpeedBase.TabIndex = 67
+		Me.LblSpeedBase.Text = "Base"
+		'
+		'LblSpeedArmor
+		'
+		Me.LblSpeedArmor.AutoSize = True
+		Me.LblSpeedArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblSpeedArmor.Location = New System.Drawing.Point(211, 8)
+		Me.LblSpeedArmor.Name = "LblSpeedArmor"
+		Me.LblSpeedArmor.Size = New System.Drawing.Size(34, 13)
+		Me.LblSpeedArmor.TabIndex = 68
+		Me.LblSpeedArmor.Text = "Armor"
+		'
+		'LblSpeedItem
+		'
+		Me.LblSpeedItem.AutoSize = True
+		Me.LblSpeedItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblSpeedItem.Location = New System.Drawing.Point(245, 8)
+		Me.LblSpeedItem.Name = "LblSpeedItem"
+		Me.LblSpeedItem.Size = New System.Drawing.Size(27, 13)
+		Me.LblSpeedItem.TabIndex = 69
+		Me.LblSpeedItem.Text = "Item"
+		'
+		'LblSpeedMisc
+		'
+		Me.LblSpeedMisc.AutoSize = True
+		Me.LblSpeedMisc.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.LblSpeedMisc.Location = New System.Drawing.Point(279, 8)
+		Me.LblSpeedMisc.Name = "LblSpeedMisc"
+		Me.LblSpeedMisc.Size = New System.Drawing.Size(28, 13)
+		Me.LblSpeedMisc.TabIndex = 70
+		Me.LblSpeedMisc.Text = "Misc"
+		'
 		'CharacterSheet
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -947,6 +1100,8 @@ Partial Class CharacterSheet
 		Me.TabControl.ResumeLayout(False)
 		Me.TabPageBasicInfo.ResumeLayout(False)
 		Me.TblBasicInfo.ResumeLayout(False)
+		Me.GBoxMovement.ResumeLayout(False)
+		Me.GBoxMovement.PerformLayout()
 		Me.GBoxAbilities.ResumeLayout(False)
 		Me.GBoxAbilities.PerformLayout()
 		Me.GboxCharInfo.ResumeLayout(False)
@@ -1039,5 +1194,18 @@ Partial Class CharacterSheet
 	Friend WithEvents TxtAbilModDex As System.Windows.Forms.TextBox
 	Friend WithEvents TxtAbilModCon As System.Windows.Forms.TextBox
 	Friend WithEvents TxtAbilModStr As System.Windows.Forms.TextBox
+	Friend WithEvents LblSpeedMisc As System.Windows.Forms.Label
+	Friend WithEvents LblSpeedItem As System.Windows.Forms.Label
+	Friend WithEvents LblSpeedArmor As System.Windows.Forms.Label
+	Friend WithEvents LblSpeedBase As System.Windows.Forms.Label
+	Friend WithEvents TxtSpeedMisc As System.Windows.Forms.TextBox
+	Friend WithEvents TxtSpeedItem As System.Windows.Forms.TextBox
+	Friend WithEvents TxtSpeedArmor As System.Windows.Forms.TextBox
+	Friend WithEvents TxtSpeedBase As System.Windows.Forms.TextBox
+	Friend WithEvents LblSpeedSquares As System.Windows.Forms.Label
+	Friend WithEvents LblSpeed As System.Windows.Forms.Label
+	Friend WithEvents TxtSpeedTotal As System.Windows.Forms.TextBox
+	Friend WithEvents LblAbilPlus As System.Windows.Forms.Label
+	Friend WithEvents LblAbilMod As System.Windows.Forms.Label
 
 End Class

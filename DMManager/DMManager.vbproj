@@ -83,7 +83,7 @@
     </Compile>
     <Compile Include="ModLevelManager.vb" />
     <Compile Include="ModIOHandler.vb" />
-    <Compile Include="ModKeypressHandler.vb" />
+    <Compile Include="ModStatsManager.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
