@@ -41,9 +41,16 @@
 	End Sub
 
 	Private Sub SetActiveFile(ByVal _fileName As String)
-		myCurrentFile = _fileName																									' set the current file property
-		SaveToolStripMenuItem.Enabled = True																						' allow saving to the current file
-		Me.Text = myCurrentFile & " - DM Manager: Character Sheet"																	' update the title bar
+		If _fileName = Nothing Then
+			myCurrentFile = Nothing																										' set the current file property
+			SaveToolStripMenuItem.Enabled = False																						' allow saving to the current file
+			Me.Text = "DM Manager: Character Sheet"																						' update the title bar
+		Else
+			myCurrentFile = _fileName																									' set the current file property
+			SaveToolStripMenuItem.Enabled = True																						' allow saving to the current file
+			Me.Text = myCurrentFile & " - DM Manager: Character Sheet"																	' update the title bar
+		End If
+
 	End Sub
 
 	'---------------------
@@ -125,6 +132,7 @@
 
 	Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
 		ModIOHandler.clearControls()																								' clear all marked controls
+		SetActiveFile(Nothing)																										' New File
 	End Sub
 
 End Class
